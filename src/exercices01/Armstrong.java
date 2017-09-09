@@ -1,8 +1,9 @@
 package exercices01;
 
 public class Armstrong {
-	
+
 	public static boolean nombreArmstrong(String input){
+		try{
 		boolean isArmstrong = false;
 		int[] chiffre = new int[input.length()];
 		int total = 0;
@@ -14,16 +15,24 @@ public class Armstrong {
 			total += chiffre[j] * chiffre[j] * chiffre[j];
 		}
 		
-		System.out.println(total);
 		if(total == Integer.parseInt(input)){
 			isArmstrong = true;
 		}
 		return isArmstrong;
+		}
+		catch(Exception e){
+				System.out.println("Vous devez rentrer des entiers.");
+				return false;
+		}
 	}
 
 	public static void main(String[] args) {
-		System.out.println("Quel nombre vous-voulez entrer ? " + nombreArmstrong("371"));
-		
+		if(nombreArmstrong("1234")){
+			System.out.println("1634 est un nombre narcissique de type 4 ");
+		}
+		else{
+			System.out.println("L'entré que vous avez fait n'est pas un nombre narcissique.");
+		}
 	}
 
 }
