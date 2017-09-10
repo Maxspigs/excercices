@@ -16,7 +16,12 @@ public class LireFichier {
 			System.out.print((char) caractere);
 		}
 		reader.close();
-
+		
+		
+		
+		/*File currentDirectory = new File(new File(".").getAbsolutePath());
+		System.out.println(currentDirectory.getCanonicalPath());
+		System.out.println(currentDirectory.getAbsolutePath());
 		/*
 		 * FileWriter writer = new FileWriter("C:/Users/Max/Desktop", true);
 		 * writer.write("Jeudi, 31 AOUT 2017"); writer.close();
