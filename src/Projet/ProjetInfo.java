@@ -2,24 +2,35 @@ package Projet;
 
 import java.util.Scanner;
 
+/**
+ * La Classe ProjetInfo est une classe pour tester les objets Entreprise, Ordinateur, 
+ * ReseauMateriel et Serveur.
+ */
 public class ProjetInfo {
 
+	/**
+	 * The main est la fonction qui représente le programme principale pour
+	 * tester les objets appartenant à une enteprise.
+	 *
+	 * @param args the arguments
+	 * @throws Exception the exception
+	 */
 	public static void main(String[] args) throws Exception {
-		Entreprise DELL = new Entreprise(0, "Dell", "Une compagnie qui c'est ou sont leur priorités : L'ARGENT");
+		Entreprise DELL = new Entreprise("Dell", "Une compagnie qui c'est ou sont leur priorités : L'ARGENT");
 		Scanner scan = new Scanner(System.in);
 		String choix;
 
-		Bien ordinateur1 = new Ordinateur(1, "Alienware", "Linux", 1000.99, 2999.99);
-		Bien ordinateur2 = new Ordinateur(2, "Alienware", "Linux", 1000.99, 2999.99);
-		Bien ordinateur3 = new Ordinateur(3, "Alienware", "Linux", 1000.99, 2999.99);
+		Bien ordinateur1 = new Ordinateur("Alienware", "Linux", 1000.99, 2999.99);
+		Bien ordinateur2 = new Ordinateur("Alienware", "Linux", 1000.99, 2999.99);
+		Bien ordinateur3 = new Ordinateur("Alienware", "Linux", 1000.99, 2999.99);
 
-		Bien serveur1 = new Serveur(4, "Php", true, 5999.99, 15999.99);
-		Bien serveur2 = new Serveur(5, "Php", true, 52999.99, 259999.99);
-		Bien serveur3 = new Serveur(6, "Php", true, 60000.99, 600000);
+		Bien serveur1 = new Serveur("Php", true, 5999.99, 15999.99);
+		Bien serveur2 = new Serveur("Php", true, 52999.99, 259999.99);
+		Bien serveur3 = new Serveur("Php", true, 60000.99, 600000);
 
-		Bien reseau1 = new ReseauMateriel(7, "Cisco", "RJ45", true, 50493.99, 1000000.99);
-		Bien reseau2 = new ReseauMateriel(8, "Alienware", "WIFI", false, 1000.99, 2999.99);
-		Bien reseau3 = new ReseauMateriel(9, "Alienware", "Fibre obtique", false, 1, 299900.99);
+		Bien reseau1 = new ReseauMateriel("Cisco", "RJ45", true, 50493.99, 1000000.99);
+		Bien reseau2 = new ReseauMateriel("Alienware", "WIFI", false, 1000.99, 2999.99);
+		Bien reseau3 = new ReseauMateriel("Alienware", "Fibre obtique", false, 1, 299900.99);
 
 		DELL.ajouterBien(ordinateur1);
 		DELL.ajouterBien(ordinateur2);

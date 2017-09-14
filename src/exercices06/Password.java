@@ -8,8 +8,19 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * La classe Password est une classe qui permet de générer aléatoirement 50 mots de passe.
+ */
 public class Password {
 
+	/**
+	 * randomPassword est une fonction qui prend en paramètre un choix.
+	 * Ce choix génère un chiffre aléatoire ou un caractere 
+	 * selon le choix choisit.
+	 *
+	 * @param choix the choix
+	 * @return the string
+	 */
 	public static String randomPassword(int choix) {
 		char[] SPECIAL_CHAR = { ';', '?', '$', '!' };
 		String password = "";
@@ -32,6 +43,11 @@ public class Password {
 		return password;
 	}
 
+	/**
+	 * generatePassword est une fonction qui permet de générer un Password.
+	 *
+	 * @return the string
+	 */
 	public static String generatePassword() {
 		String password = "";
 		ArrayList<String> caractere = new ArrayList<>();
@@ -53,7 +69,12 @@ public class Password {
 		return password;
 	}
 
-	public static void main(String[] args) {
+	/**
+	 * The main est le programme principale qui permet de mettre les password dans un fichier.
+	 *
+	 * @param args the arguments
+	 */
+	public static void main(String[] args){
 
 		Set<String> passwordContainer = new HashSet<>();
 		while (passwordContainer.size() != 50) {
